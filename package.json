@@ -10,27 +10,57 @@
   },
   "dependencies": {
     "@babel/core": "7.0.0",
+    "@crudlio/crudl-connectors-base": "^0.1.2",
     "@youi/react-native-youi": "5.10.0",
-    "babel-preset-react-native": "4.0.0",
-    "metro-react-native-babel-preset": "^0.45.0",
     "react": "16.6.3",
-    "react-native": "0.58.6"
+    "react-native": "0.58.6",
+    "react-navigation": "2.18.3",
+    "react-redux": "6.0.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "url": "^0.11.0"
   },
   "devDependencies": {
+    "@types/jest": "23.3.13",
+    "@types/react": "16.4.18",
+    "@types/react-native": "0.57.65",
+    "@types/react-navigation": "2.0.12",
+    "@types/react-redux": "6.0.1",
+    "@types/react-test-renderer": "16.0.3",
+    "babel-jest": "^26.3.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-react-native": "4.0.0",
     "babel-register": "^6.26.0",
     "jest": "^24.0.0",
-    "react-test-renderer": "^16.6.3"
+    "metro-react-native-babel-preset": "^0.45.0",
+    "react-test-renderer": "16.6.3",
+    "typescript": "3.9.6"
   },
   "jest": {
     "preset": "@youi/react-native-youi",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
     "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.[jt]sx?$": "babel-jest"
     },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(jest-)?react-native|@youi)"
+    ],
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/appium/"
     ]
+  },
+  "resolutions": {
+    "@types/react": "16.4.18",
+    "@types/react-native": "0.57.65"
   }
 }
