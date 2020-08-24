@@ -4,8 +4,10 @@
 set (YI_PROJECT_SOURCE
     src/App.cpp
     src/AppFactory.cpp
+    src/InteractionModule.cpp
 )
 
 set (YI_PROJECT_HEADERS
     src/App.h
+    src/InteractionModule.h
 )
